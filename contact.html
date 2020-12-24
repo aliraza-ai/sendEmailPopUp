@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Greenacres Dry Cleaning & Alterations - Tailoring & Custom Dresses">
+    <meta name="author" content="unicoder">
+    <title>Greenacres Dry Cleaning & Alterations - Tailoring & Custom Dresses</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600&display=swap" rel="stylesheet">
+
+    <!--  CSS Style -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/webfonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/template.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/category/category-two.css" id="color-change">
+    <style type="text/css">
+    	#largeModal
+    	{
+    		top: 20%;
+    	}
+    </style>
+</head>
+
+<body>
+	<!-- Modal -->
+<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Email Sending</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <i class="fa fa-check" aria-hidden="true" style="color:green;"></i>
+ Your email sent Successfully, Thank you.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="rest();" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="page_wrapper">
+        <!-- Header Section Start -->
+        <header class="nav-split-simple nav-on-top fixed-bg-white">
+
+            <div class="main-nav py-lg-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <nav class="navbar navbar-expand-lg nav-line-active nav-dark nav-primary-hover">
+                                <!-- <a class="navbar-brand" href="#"><img class="nav-logo" src="assets/images/logo/1.png" alt="Image not found !"></a> -->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon flaticon-menu flat-small text-primary"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav w-100">
+                                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a> </li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">About</a> </li>
+                                        <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+     
+                                        
+                                      
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Section End -->
+		
+		<div class="full-row p-0">
+			<div class="container-fluid">
+				<div class="row">
+					<div id="map" style="height: 500px; width: 100%; overflow: hidden;"></div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="full-row">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 col-md-7">
+						<h3 class="down-line mb-5">Send Message</h3>
+						<div class="form-simple mb-5">
+							<form id="contact-form" action="email.php" method="POST">
+								<div class="form-row">
+									<div class="col-md-6">
+										<label>Full Name:</label>
+										<input type="text" id="firstname" class="form-control bg-gray" name="firstname" required="">
+									</div>
+									<div class="col-md-6">
+										<label>Your Email:</label>
+										<input type="email" id="email" class="form-control bg-gray" name="email" required="">
+									</div>
+									<div class="col-md-12">
+										<label>Subject:</label>
+										<input type="text" id="subject" class="form-control bg-gray" name="subject" required="">
+									</div>
+									<div class="col-md-12">
+										<label>Message:</label>
+										<textarea class="form-control bg-gray" id="message" name="message" rows="8" required=""></textarea>
+									</div>
+									<div class="col-md-12">
+										<button class="btn btn-primary" id="send" name="submit" ng-click="openModal();"  type="submit">Send Message</button>
+									</div>
+									<div class="col-lg-12">
+										<div class="">
+											<div class="success" id="success"></div>
+											<div class="d-none" id="error"> Error occurred while sending email. Please try again later.</div>
+										</div>
+									</div>
+								</div>
+							</form>
+		
+
+						</div>
+					</div>
+					<div class="col-lg-5 col-md-5">
+						<h3 class="down-line mb-5">Get In Touch</h3>
+						<p>World-class service, attention to detail, and customer service & cleaning teams who put our customers first, have made us a “Best in Class” dry cleaner.</p>
+						<div class="d-flex mb-3">
+							<ul>
+								<li class="mb-3">
+									<strong>Office Address :</strong><br>
+									18207 E Appleway Ave, Spokane Valley, WA 99016
+								</li>
+								<li class="mb-3">
+									<strong>Contact Number :</strong><br>
+									(509) 926-6065
+								</li>
+								<li class="mb-3">
+									<strong>Email Address :</strong><br>
+									greenacresdrycleaner@gmail.com
+								</li>
+							</ul>
+						</div>
+						<h5 class="mb-2" >Career Info</h5>
+						<p>If you’re interested in employment opportunities at Greenacres, please email us at:<br> <a href="#">greenacresdrycleaner@gmail.com</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="full-row bg-primary py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 col-md-12">
+						<h4 class="mb-2" style="color:white;">Schedule A Free Pick Up And Delivery Today!</h4>
+						<p class="text-secondary" style="color:white !important;">World-class service, attention</p>
+					</div>
+					<div class="col-lg-5 col-md-12">
+						<div class="y-center position-relative d-table ml-auto text-white sm-margin-none"><a href="tel:5099266065" class="btn btn-secondary">Get Customer Support</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	  <!-- Footer Section Start -->
+        <footer class="full-row bg-footer footer-simple-dark text-general">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="mb-5 border-left pl-3">
+                            <span class="d-block mb-3">Call us any time</span>
+                            <div class="h6 text-white">(509) 926-6065</div>
+                            <span class="text-primary">24/7 Available</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="mb-5 border-left pl-3">
+                            <span class="d-block mb-3">Send us email</span>
+                            <div class="h6 text-white">greenacresdrycleaner@gmail.com</div>
+                            <span class="text-primary">Response time avg 24/h</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="mb-5 border-left pl-3">
+                            <span class="d-block mb-3">Visit in office</span>
+                            <div class="h6 text-white">18207 E Appleway Ave, Spokane Valley, WA 99016</div>
+                            <span class="text-primary">10:00am - 4:00pm week</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer-widget widget-hours mb-5">
+                            <h4 class="widget-title mb-4">Business Hours</h4>
+                            <ul>
+                                <li>Monday - Friday : <span>9:00 am - 8:00 pm</span></li>
+                                <li>Saturday : <span>9:00 am - 6:00 pm</span></li>
+                                <li>Sunday : <span>Closed</span></li>
+                                <li>Working Site : <span>7 Days</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer-widget widget-hours mb-5">
+                            <h4 class="widget-title mb-4">Newslatter</h4>
+                            <p>Signup for newslatter to get latest news and company updates.</p>
+                            <form action="#" class="subscribe-widget">
+                                <input class="form-control bg-dark" type="text" placeholder="Email Address" aria-label="Address">
+                                <button class="btn btn-primary-fixed text-secondary rounded-0" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+
+        <!-- Copyright Section Start -->
+        <div class="copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                         <span>©️ 2021 All Rights Reserved by Greenacres Dry Cleaners &nbsp; &nbsp; &nbsp;   Design By <a href="https://www.thescorefinder.com" style=""><span style="color:#0DA815;">The Score Finder</span></a></span>
+                       
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="line-menu sitemap list-color-general">
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Permission</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright Section End -->
+        <!-- Scroll to top -->
+        <a href="#" class="bg-primary text-white" id="scroll"><i class="fa fa-angle-up"></i></a>
+        <!-- End Scroll To top -->
+    </div>
+    <!-- Wrapper End -->
+
+    <!--===============================================================================================-->
+    <!-- All Javascript Plugin File here -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+    	
+
+    $("#success").hide();
+    //$("#myModal1").hide();
+    
+        $('#contact-form').on('submit',function(){
+                        var input=$('#email').val();
+                        
+                        
+                        if(input)
+                        {
+                            
+                            $('#largeModal').modal('show');
+                        }
+                      
+
+    });
+
+function rest()
+{
+	 window.location.replace("contact.html");
+}
+    </script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/validate.js"></script>
+    <script src="assets/js/custom.js"></script>
+	
+	<!-- use for map style --> 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPZ-Erd-14Vf2AoPW2Pzlxssf6-2R3PPs"></script>
+	<script src="assets/js/map.scripts.js"></script>
+	<script>
+	(function($){	
+		var _latitude = 36.596165;
+		var _longitude = -97.062988;
+		init(_latitude, _longitude);
+	})(jQuery);
+	</script>
+
+</body>
+</html>
